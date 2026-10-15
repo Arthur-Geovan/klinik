@@ -1,0 +1,127 @@
+<?php
+
+require __DIR__ . '/../vendor/autoload.php';
+
+$app = require __DIR__ . '/../bootstrap/app.php';
+$kernel = $app->make(Illuminate\Contracts\Console\Kernel::class);
+$kernel->bootstrap();
+
+$names = [
+    'Paracetamol 500mg',
+    'Amoxicillin 500mg',
+    'Ibuprofen 200mg',
+    'Vitamin C 500mg',
+    'Cetirizine 10mg',
+    'Amlodipine 5mg',
+    'Metformin 500mg',
+    'Omeprazole 20mg',
+    'Cefixime 100mg',
+    'Salbutamol 2mg',
+    'Methylprednisolone 4mg',
+    'Salep Betametason',
+    'Antangin Cair 60ml',
+    'OBH Sirup Batuk 100ml',
+    'Dekolgen Sirup',
+    'Oralit',
+    'Neurobion',
+    'Kalk',
+    'Minyak Kayu Putih',
+    'Rivanol 0,5%',
+    'Hydrocortisone 2,5%',
+    'Loratadine 10mg',
+    'Pseudoephedrine 60mg',
+    'Simvastatin 10mg',
+    'Glimepiride 2mg',
+    'Bisoprolol 5mg',
+    'Domperidone 10mg',
+    'Clarithromycin 500mg',
+    'Azithromycin 500mg',
+    'Levofloxacin 500mg',
+    'Mefenamic Acid 500mg',
+    'Albuterol 2mg',
+    'Dexamethasone 0,5mg',
+    'Furosemide 40mg',
+    'Aspirin 80mg',
+    'Bromhexine 8mg',
+    'Acetazolamide 250mg',
+    'Bacitracin Ointment',
+    'Hydrocortisone Cream',
+    'Cotrimoxazole 480mg',
+    'Captopril 25mg',
+    'Losartan 50mg',
+    'Atenolol 50mg',
+    'Naproxen 500mg',
+    'Allopurinol 100mg',
+    'Spironolactone 25mg',
+    'Calcium Carbonate 500mg',
+    'Vitamin B Complex',
+    'Folic Acid 1mg',
+    'Piroxicam 10mg',
+    'Miconazole 2%',
+    'Ketoconazole 2%',
+    'Biperiden 2mg',
+    'Diazepam 2mg',
+    'Ranitidine 150mg',
+    'Famotidine 40mg',
+    'Magnesium Hydroxide 500mg',
+    'Cefadroxil 500mg',
+    'Ampicillin 500mg',
+    'Penicillin G 500kIU',
+    'Cefuroxime 500mg',
+    'Erythromycin 500mg',
+    'Gliclazide 80mg',
+    'Sulfamethoxazole 400mg',
+    'Doxycycline 100mg',
+    'Acyclovir 200mg',
+    'Nifedipine 30mg',
+    'Verapamil 80mg',
+    'Clindamycin 300mg',
+    'Lansoprazole 30mg',
+    'Prednisolone 5mg',
+    'Miconazole Cream',
+    'Gentamicin Ointment',
+    'Cholestyramine 4g',
+    'Methyl Salicylate 10%',
+    'Bismuth Subsalicylate 262mg',
+    'Loperamide 2mg',
+    'Promethazine 25mg',
+    'Meloxicam 7,5mg',
+    'Cefalexin 500mg',
+    'Budesonide 0,5mg',
+    'Baclofen 10mg',
+    'Cyclophosphamide 50mg',
+    'Triamcinolone 1mg',
+    'Fluconazole 150mg',
+    'Tetracycline 250mg',
+    'Colchicine 0,5mg',
+    'Ramipril 5mg',
+    'Enalapril 10mg',
+    'Nystatin 100.000 IU',
+    'Aminophylline 100mg',
+    'Vitamin D3 400 IU',
+    'Iron Fumarate 300mg',
+    'Zinc Sulfate 20mg',
+    'Sodium Bicarbonate 500mg',
+    'Acetaminophen 650mg',
+    'Lansoprazole 15mg',
+    'Cefixime 200mg',
+    'Aspirin 100mg',
+    'Guaifenesin 100mg',
+];
+
+$now = now();
+
+foreach (range(1, 1000) as $i) {
+    $name = $names[($i - 1) % count($names)];
+    App\Models\MObat::where('id', $i)->update([
+        'nama_obat' => $name,
+        'updated_at' => $now,
+    ]);
+}
+
+echo 'Updated ' . App\Models\MObat::count() . ' rows.' . PHP_EOL;
+
+echo json_encode(
+    App\Models\MObat::select('id', 'nama_obat')->orderBy('id')->limit(10)->get()->toArray(),
+    JSON_PRETTY_PRINT
+) . PHP_EOL;

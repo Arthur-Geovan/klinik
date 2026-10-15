@@ -1,0 +1,248 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3100" height="2550" viewBox="0 0 3100 2550" role="img" aria-labelledby="title desc">
+  <title id="title">Use Case Menyeluruh Sistem Informasi Klinik</title>
+  <desc id="desc">Satu diagram use case menyeluruh berdasarkan route dan fitur aplikasi klinik: pasien, dokter, admin, apoteker, serta klien API.</desc>
+  <defs>
+    <style>
+      text{font-family:"Segoe UI",Arial,sans-serif;fill:#18334a}
+      .heading{font-size:36px;font-weight:700}
+      .subtitle{font-size:18px;fill:#557087}
+      .boundary{fill:#f8fafc;stroke:#355e7c;stroke-width:3}
+      .system-title{font-size:23px;font-weight:700;fill:#284f6c}
+      .section{font-size:16px;font-weight:700;fill:#557087;letter-spacing:.6px}
+      .uc{fill:#fff;stroke:#5680a1;stroke-width:2.3}
+      .uc-text{font-size:15px;font-weight:600;text-anchor:middle}
+      .uc-note{font-size:13px;fill:#607b8d;text-anchor:middle}
+      .actor{fill:none;stroke:#29485e;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+      .actor-label{font-size:18px;font-weight:700;text-anchor:middle}
+      .actor-note{font-size:13px;fill:#657e8e;text-anchor:middle}
+      .association{fill:none;stroke:#8b9eaa;stroke-width:1.8}
+      .relationship{fill:none;stroke:#405e76;stroke-width:2.3;stroke-dasharray:8 6}
+      .relation-label{font-size:14px;font-weight:700;fill:#34566f;text-anchor:middle}
+      .condition{font-size:12px;fill:#657e8e;text-anchor:middle}
+      .legend{font-size:14px;fill:#526b7c}
+      .legend-line{fill:none;stroke:#405e76;stroke-width:2.3;stroke-dasharray:8 6}
+      .divider{stroke:#d5e0e8;stroke-width:1.4;stroke-dasharray:7 7}
+    </style>
+    <marker id="uml-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#405e76"/>
+    </marker>
+    <g id="person" class="actor">
+      <circle cx="0" cy="0" r="15"/>
+      <path d="M0 16V66M-29 38H29M0 66L-25 98M0 66L25 98"/>
+    </g>
+    <g id="system-actor" class="actor">
+      <rect x="-34" y="-22" width="68" height="44" rx="8"/>
+      <path d="M0-22V-40M-19-40H19"/>
+    </g>
+  </defs>
+
+  <rect width="3100" height="2550" fill="#edf2f6"/>
+  <text x="1550" y="53" class="heading" text-anchor="middle">USE CASE MENYELURUH — SISTEM INFORMASI KLINIK</text>
+  <text x="1550" y="84" class="subtitle" text-anchor="middle">Disusun dari fitur dan hak akses pada proyek aplikasi klinik, bukan menyalin susunan diagram contoh</text>
+
+  <rect x="280" y="120" width="2540" height="2200" rx="24" class="boundary"/>
+  <text x="320" y="162" class="system-title">Sistem Informasi Klinik</text>
+  <text x="320" y="190" class="subtitle">Alur pasien, pelayanan medis, operasional klinik, farmasi, dan integrasi API</text>
+
+  <line x1="310" y1="217" x2="2790" y2="217" class="divider"/>
+  <line x1="920" y1="240" x2="920" y2="2025" class="divider"/>
+  <line x1="1460" y1="240" x2="1460" y2="2025" class="divider"/>
+  <line x1="2000" y1="240" x2="2000" y2="2025" class="divider"/>
+  <line x1="310" y1="2050" x2="2790" y2="2050" class="divider"/>
+
+  <text x="690" y="253" class="section" text-anchor="middle">AKUN DAN LAYANAN PASIEN</text>
+  <text x="1230" y="253" class="section" text-anchor="middle">PELAYANAN DOKTER</text>
+  <text x="1770" y="253" class="section" text-anchor="middle">PENGELOLAAN KLINIK</text>
+  <text x="2310" y="253" class="section" text-anchor="middle">FARMASI</text>
+  <text x="1550" y="2083" class="section" text-anchor="middle">AKSES INTEGRASI API</text>
+
+  <!-- Patient associations -->
+  <path class="association" d="M165 1050L500 310"/>
+  <path class="association" d="M165 1050L500 495"/>
+  <path class="association" d="M165 1050L500 680"/>
+  <path class="association" d="M165 1050L500 865"/>
+  <path class="association" d="M165 1050L500 1050"/>
+  <path class="association" d="M165 1050L500 1235"/>
+  <path class="association" d="M165 1050L500 1420"/>
+  <path class="association" d="M165 1050L500 1605"/>
+  <path class="association" d="M165 1050L500 1790"/>
+  <path class="association" d="M165 1050L500 1975"/>
+
+  <!-- Doctor associations -->
+  <path class="association" d="M165 1630L1040 310"/>
+  <path class="association" d="M165 1630L1040 495"/>
+  <path class="association" d="M165 1630L1040 680"/>
+  <path class="association" d="M165 1630L1040 865"/>
+  <path class="association" d="M165 1630L1040 1050"/>
+  <path class="association" d="M165 1630L1040 1235"/>
+
+  <!-- Administrator associations -->
+  <path class="association" d="M2935 830L2000 310"/>
+  <path class="association" d="M2935 830L2000 495"/>
+  <path class="association" d="M2935 830L2000 680"/>
+  <path class="association" d="M2935 830L2000 865"/>
+  <path class="association" d="M2935 830L2000 1050"/>
+  <path class="association" d="M2935 830L2000 1235"/>
+  <path class="association" d="M2935 830L2000 1420"/>
+  <path class="association" d="M2935 830L2000 1605"/>
+  <path class="association" d="M2935 830L2000 1790"/>
+  <path class="association" d="M2935 830L2000 1975"/>
+
+  <!-- Pharmacist associations -->
+  <path class="association" d="M2935 1510L2540 310"/>
+  <path class="association" d="M2935 1510L2540 495"/>
+  <path class="association" d="M2935 1510L2540 680"/>
+  <path class="association" d="M2935 1510L2540 865"/>
+  <path class="association" d="M2935 1510L2540 1050"/>
+  <path class="association" d="M2935 1510L2540 1235"/>
+  <path class="association" d="M2935 1510L2000 1790"/>
+
+  <!-- API client associations -->
+  <path class="association" d="M1550 2390L1000 2140"/>
+  <path class="association" d="M1550 2390L1550 2140"/>
+  <path class="association" d="M1550 2390L2100 2140"/>
+
+  <!-- Patient use cases -->
+  <ellipse cx="690" cy="310" rx="190" ry="48" class="uc"/>
+  <text x="690" y="316" class="uc-text">Mendaftar akun pasien</text>
+  <ellipse cx="690" cy="495" rx="190" ry="48" class="uc"/>
+  <text x="690" y="501" class="uc-text">Login dan membuka dashboard</text>
+  <ellipse cx="690" cy="680" rx="190" ry="48" class="uc"/>
+  <text x="690" y="676" class="uc-text"><tspan x="690">Melihat dokter dan</tspan><tspan x="690" dy="19">memilih jadwal praktik</tspan></text>
+  <ellipse cx="690" cy="865" rx="190" ry="48" class="uc"/>
+  <text x="690" y="871" class="uc-text">Membuat reservasi</text>
+  <ellipse cx="690" cy="1050" rx="190" ry="48" class="uc"/>
+  <text x="690" y="1046" class="uc-text"><tspan x="690">Melihat status dan</tspan><tspan x="690" dy="19">riwayat reservasi</tspan></text>
+  <ellipse cx="690" cy="1235" rx="190" ry="48" class="uc"/>
+  <text x="690" y="1231" class="uc-text"><tspan x="690">Mengunggah dan melihat</tspan><tspan x="690" dy="19">lampiran medis</tspan></text>
+  <ellipse cx="690" cy="1420" rx="190" ry="48" class="uc"/>
+  <text x="690" y="1426" class="uc-text">Bertanya melalui chatbot AI</text>
+  <ellipse cx="690" cy="1605" rx="190" ry="48" class="uc"/>
+  <text x="690" y="1601" class="uc-text"><tspan x="690">Melihat status dan</tspan><tspan x="690" dy="19">riwayat pembayaran</tspan></text>
+  <ellipse cx="690" cy="1790" rx="190" ry="48" class="uc"/>
+  <text x="690" y="1796" class="uc-text">Mengunduh kuitansi pembayaran</text>
+  <ellipse cx="690" cy="1975" rx="190" ry="48" class="uc"/>
+  <text x="690" y="1981" class="uc-text">Memberi ulasan dan rating dokter</text>
+
+  <!-- Doctor use cases -->
+  <ellipse cx="1230" cy="310" rx="190" ry="48" class="uc"/>
+  <text x="1230" y="306" class="uc-text"><tspan x="1230">Melihat jadwal praktik</tspan><tspan x="1230" dy="19">dan daftar pasien</tspan></text>
+  <ellipse cx="1230" cy="495" rx="190" ry="48" class="uc"/>
+  <text x="1230" y="501" class="uc-text">Memperbarui status reservasi</text>
+  <ellipse cx="1230" cy="680" rx="190" ry="48" class="uc"/>
+  <text x="1230" y="686" class="uc-text">Memeriksa pasien</text>
+  <ellipse cx="1230" cy="865" rx="190" ry="48" class="uc"/>
+  <text x="1230" y="861" class="uc-text"><tspan x="1230">Mencatat keluhan, diagnosis,</tspan><tspan x="1230" dy="19">dan rekam medis</tspan></text>
+  <ellipse cx="1230" cy="1050" rx="190" ry="48" class="uc"/>
+  <text x="1230" y="1056" class="uc-text">Menambahkan resep obat</text>
+  <ellipse cx="1230" cy="1235" rx="190" ry="48" class="uc"/>
+  <text x="1230" y="1231" class="uc-text"><tspan x="1230">Menambahkan lampiran</tspan><tspan x="1230" dy="19">hasil pemeriksaan</tspan></text>
+
+  <!-- Clinic administration use cases -->
+  <ellipse cx="1770" cy="310" rx="190" ry="48" class="uc"/>
+  <text x="1770" y="316" class="uc-text">Melihat dashboard operasional</text>
+  <ellipse cx="1770" cy="495" rx="190" ry="48" class="uc"/>
+  <text x="1770" y="501" class="uc-text">Mengelola data poli</text>
+  <ellipse cx="1770" cy="680" rx="190" ry="48" class="uc"/>
+  <text x="1770" y="686" class="uc-text">Mengelola data dokter</text>
+  <ellipse cx="1770" cy="865" rx="190" ry="48" class="uc"/>
+  <text x="1770" y="871" class="uc-text">Mengelola jadwal praktik</text>
+  <ellipse cx="1770" cy="1050" rx="190" ry="48" class="uc"/>
+  <text x="1770" y="1046" class="uc-text"><tspan x="1770">Melihat dan memperbarui</tspan><tspan x="1770" dy="19">reservasi</tspan></text>
+  <ellipse cx="1770" cy="1235" rx="190" ry="48" class="uc"/>
+  <text x="1770" y="1231" class="uc-text"><tspan x="1770">Mengelola pembayaran</tspan><tspan x="1770" dy="19">dan tagihan</tspan></text>
+  <ellipse cx="1770" cy="1420" rx="190" ry="48" class="uc"/>
+  <text x="1770" y="1426" class="uc-text">Mengonfirmasi pembayaran lunas</text>
+  <ellipse cx="1770" cy="1605" rx="190" ry="48" class="uc"/>
+  <text x="1770" y="1601" class="uc-text"><tspan x="1770">Melihat lampiran</tspan><tspan x="1770" dy="19">rekam medis pasien</tspan></text>
+  <ellipse cx="1770" cy="1790" rx="190" ry="48" class="uc"/>
+  <text x="1770" y="1786" class="uc-text"><tspan x="1770">Mengelola data obat</tspan><tspan x="1770" dy="19">dan stok</tspan></text>
+  <ellipse cx="1770" cy="1975" rx="190" ry="48" class="uc"/>
+  <text x="1770" y="1971" class="uc-text"><tspan x="1770">Membuat dan menyimpan</tspan><tspan x="1770" dy="19">kuitansi pembayaran</tspan></text>
+
+  <!-- Pharmacy use cases -->
+  <ellipse cx="2310" cy="310" rx="190" ry="48" class="uc"/>
+  <text x="2310" y="316" class="uc-text">Melihat resep masuk</text>
+  <ellipse cx="2310" cy="495" rx="190" ry="48" class="uc"/>
+  <text x="2310" y="491" class="uc-text"><tspan x="2310">Menyiapkan resep dan</tspan><tspan x="2310" dy="19">memperbarui biaya obat</tspan></text>
+  <ellipse cx="2310" cy="680" rx="190" ry="48" class="uc"/>
+  <text x="2310" y="686" class="uc-text">Memastikan pembayaran lunas</text>
+  <ellipse cx="2310" cy="865" rx="190" ry="48" class="uc"/>
+  <text x="2310" y="861" class="uc-text"><tspan x="2310">Mengelola data obat</tspan><tspan x="2310" dy="19">dan stok</tspan></text>
+  <ellipse cx="2310" cy="1050" rx="190" ry="48" class="uc"/>
+  <text x="2310" y="1056" class="uc-text">Mengonfirmasi obat siap</text>
+  <ellipse cx="2310" cy="1235" rx="190" ry="48" class="uc"/>
+  <text x="2310" y="1231" class="uc-text"><tspan x="2310">Menyerahkan obat</tspan><tspan x="2310" dy="19">kepada pasien</tspan></text>
+
+  <!-- API use cases -->
+  <ellipse cx="1000" cy="2140" rx="205" ry="44" class="uc"/>
+  <text x="1000" y="2136" class="uc-text"><tspan x="1000">Mengambil data pasien</tspan><tspan x="1000" dy="18">melalui API</tspan></text>
+  <ellipse cx="1550" cy="2140" rx="205" ry="44" class="uc"/>
+  <text x="1550" y="2146" class="uc-text">Mengambil daftar dokter API</text>
+  <ellipse cx="2100" cy="2140" rx="205" ry="44" class="uc"/>
+  <text x="2100" y="2136" class="uc-text"><tspan x="2100">Membuat reservasi</tspan><tspan x="2100" dy="18">melalui API</tspan></text>
+
+  <!-- UML include and extend relationships -->
+  <path class="relationship" d="M880 865C930 865 930 680 880 680" marker-end="url(#uml-arrow)"/>
+  <text x="947" y="775" class="relation-label">&lt;&lt;include&gt;&gt;</text>
+  <text x="947" y="794" class="condition">[pilih dokter dan jadwal]</text>
+
+  <path class="relationship" d="M1040 1050C990 1050 990 865 1040 865" marker-end="url(#uml-arrow)"/>
+  <text x="985" y="984" class="relation-label">&lt;&lt;extend&gt;&gt;</text>
+  <text x="985" y="1002" class="condition">[jika perlu obat]</text>
+
+  <path class="relationship" d="M1040 1235C1010 1235 1010 865 1040 865" marker-end="url(#uml-arrow)"/>
+  <text x="1050" y="1145" class="relation-label">&lt;&lt;extend&gt;&gt;</text>
+  <text x="1050" y="1163" class="condition">[hasil/lampiran tersedia]</text>
+
+  <path class="relationship" d="M690 1790C650 1790 650 1605 690 1605" marker-end="url(#uml-arrow)"/>
+  <text x="625" y="1695" class="relation-label">&lt;&lt;extend&gt;&gt;</text>
+  <text x="625" y="1713" class="condition">[pembayaran lunas]</text>
+
+  <path class="relationship" d="M1770 1420C1810 1420 1810 1975 1770 1975" marker-end="url(#uml-arrow)"/>
+  <text x="1835" y="1695" class="relation-label">&lt;&lt;include&gt;&gt;</text>
+
+  <path class="relationship" d="M2310 1235C2360 1235 2360 495 2310 495" marker-end="url(#uml-arrow)"/>
+  <text x="2380" y="865" class="relation-label">&lt;&lt;extend&gt;&gt;</text>
+  <text x="2380" y="883" class="condition">[status pembayaran lunas]</text>
+
+  <path class="relationship" d="M1000 2184C1020 2220 1170 2250 1250 2250" marker-end="url(#uml-arrow)"/>
+  <text x="1085" y="2220" class="relation-label">&lt;&lt;include&gt;&gt;</text>
+  <path class="relationship" d="M1550 2184C1530 2215 1380 2250 1250 2250" marker-end="url(#uml-arrow)"/>
+  <text x="1450" y="2220" class="relation-label">&lt;&lt;include&gt;&gt;</text>
+  <path class="relationship" d="M2100 2184C2080 2220 1930 2250 1850 2250" marker-end="url(#uml-arrow)"/>
+  <text x="2000" y="2220" class="relation-label">&lt;&lt;include&gt;&gt;</text>
+  <ellipse cx="1250" cy="2250" rx="165" ry="36" class="uc"/>
+  <text x="1250" y="2255" class="uc-text">Memvalidasi API key</text>
+  <ellipse cx="1850" cy="2250" rx="185" ry="36" class="uc"/>
+  <text x="1850" y="2246" class="uc-text"><tspan x="1850">Memvalidasi sesi login</tspan><tspan x="1850" dy="17">pasien</tspan></text>
+
+  <!-- Actors -->
+  <use href="#person" x="130" y="1020"/>
+  <text x="130" y="1145" class="actor-label">Pasien</text>
+  <text x="130" y="1166" class="actor-note">pengguna layanan klinik</text>
+
+  <use href="#person" x="130" y="1600"/>
+  <text x="130" y="1725" class="actor-label">Dokter</text>
+  <text x="130" y="1746" class="actor-note">tenaga medis</text>
+
+  <use href="#person" x="2970" y="800"/>
+  <text x="2970" y="925" class="actor-label">Admin</text>
+  <text x="2970" y="946" class="actor-note">pengelola klinik</text>
+
+  <use href="#person" x="2970" y="1480"/>
+  <text x="2970" y="1605" class="actor-label">Apoteker</text>
+  <text x="2970" y="1626" class="actor-note">pengelola resep dan obat</text>
+
+  <use href="#system-actor" x="1550" y="2390"/>
+  <text x="1550" y="2470" class="actor-label">Klien API</text>
+
+  <!-- Legend -->
+  <line x1="320" y1="2390" x2="380" y2="2390" class="association"/>
+  <text x="395" y="2395" class="legend">asosiasi aktor</text>
+  <line x1="560" y1="2390" x2="620" y2="2390" class="legend-line" marker-end="url(#uml-arrow)"/>
+  <text x="638" y="2395" class="legend">&lt;&lt;include&gt;&gt; langkah yang selalu disertakan</text>
+  <line x1="1090" y1="2390" x2="1150" y2="2390" class="legend-line" marker-end="url(#uml-arrow)"/>
+  <text x="1168" y="2395" class="legend">&lt;&lt;extend&gt;&gt; perilaku tambahan dengan kondisi</text>
+  <text x="1550" y="2515" class="subtitle" text-anchor="middle">Panah putus-putus mengarah ke use case dasar yang disertakan atau diperluas.</text>
+</svg>
